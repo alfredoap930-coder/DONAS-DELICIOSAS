@@ -1,0 +1,111 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Donas Deliciosas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff5f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff7b00;
+            color: white;
+            padding: 25px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .menu {
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            margin: 15px auto;
+            padding: 20px;
+            width: 280px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .price {
+            font-size: 1.4em;
+            color: #ff7b00;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #25D366;
+            color: white;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1ebe5d;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍩 Donas Deliciosas</h1>
+    <p>¡Pedidos por WhatsApp!</p>
+</header>
+
+<section class="menu">
+
+    <div class="card">
+        <h2>Dona de Azúcar</h2>
+        <p>Clásica y esponjosa</p>
+        <p class="price">$7 MXN</p>
+        <button onclick="pedir('Dona de Azúcar')">Pedir</button>
+    </div>
+
+    <div class="card">
+        <h2>Dona de Moca</h2>
+        <p>Con delicioso sabor a café</p>
+        <p class="price">$10 MXN</p>
+        <button onclick="pedir('Dona de Moca')">Pedir</button>
+    </div>
+
+</section>
+
+<footer>
+    📲 WhatsApp: 55 3822 4488  
+    <br>
+    © 2026 Donas Deliciosas
+</footer>
+
+<script>
+    function pedir(producto) {
+        let numero = "525538224488";
+        let mensaje = "Hola, quiero pedir una " + producto;
+        let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+    }
+</script>
+
+</body>
+</html>
